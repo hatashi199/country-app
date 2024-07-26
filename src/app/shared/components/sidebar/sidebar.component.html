@@ -1,0 +1,13 @@
+<ul class="flex flex-col">
+	<li
+		*ngFor="let route of routes; let i = index"
+		[routerLink]="route.path"
+		[routerLinkActive]="'routeActive'"
+		[routerLinkActiveOptions]="{ exact: true }"
+		class="cursor-pointer"
+	>
+		<span *ngIf="i < routes.length - 1">{{
+			route.path + ' page' | titlecase
+		}}</span>
+	</li>
+</ul>
