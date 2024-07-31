@@ -1,16 +1,11 @@
-<div
-	class="flex flex-col items-center"
-	id="mainpage"
->
-	<h1>Aplicación de Países</h1>
-	<div class="flex gap-x-4 w-full">
-		<div>
-			<shared-sidebar></shared-sidebar>
-		</div>
-		<div>
-			<router-outlet></router-outlet>
-			<!-- <shared-home-page></shared-home-page>
+<shared-header></shared-header>
+<div class="flex gap-x-4 w-full">
+	<div>
+		<shared-sidebar></shared-sidebar>
+	</div>
+	<div>
+		<router-outlet></router-outlet>
+		<!-- <shared-home-page></shared-home-page>
 			<shared-about-page></shared-about-page> -->
-		</div>
 	</div>
 </div>
