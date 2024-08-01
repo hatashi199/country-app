@@ -4,9 +4,10 @@ import { ByCountryPageComponent } from './pages/by-country-page/by-country-page.
 import { ByRegionPageComponent } from './pages/by-region-page/by-region-page.component';
 import { CountriesRoutingModule } from './countries-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-	imports: [CountriesRoutingModule, SharedModule],
+	imports: [CountriesRoutingModule, SharedModule, CommonModule],
 	exports: [],
 	declarations: [
 		ByCapitalPageComponent,
