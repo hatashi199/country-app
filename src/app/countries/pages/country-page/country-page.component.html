@@ -1,0 +1,28 @@
+<ng-template #loading>
+	<div class="flex justify-center items-center">
+		<span>Espere por favor ...</span>
+	</div>
+</ng-template>
+
+<div *ngIf="country; else loading">
+	<div>
+		<h2>País - {{ country.name.common }}</h2>
+		<div>
+			<h2>Bandera</h2>
+			<img
+				[src]="country.flags.svg"
+				alt="img-thumbnail"
+			/>
+		</div>
+		<ul>
+			<li>Población - {{ country.population }}</li>
+			<li>Código - {{ country.cca3 }}</li>
+		</ul>
+		<div>
+			<span>{{ country.translations['ara'].common }}</span>
+			<span>{{ country.translations['kor'].common }}</span>
+			<span>{{ country.translations['jpn'].common }}</span>
+			<span>{{ country.translations['ita'].common }}</span>
+		</div>
+	</div>
+</div>

@@ -1,13 +1,17 @@
-<div class="bg-white shadow-lg rounded-lg overflow-hidden mx-6">
+<div
+	class="bg-white border border-2 border-solid rounded-lg overflow-hidden mx-6 mt-8"
+>
 	<ul class="divide-y-2 divide-gray-200">
 		<li
-			*ngFor="let route of routes.slice(0, routes.length - 1)"
-			[routerLink]="route.path"
+			*ngFor="let route of routes.slice(0, routes.length - 2)"
+			[routerLink]="'countries/' + route.path"
 			[routerLinkActive]="'routeActive'"
 			[routerLinkActiveOptions]="{ exact: true }"
 			class="cursor-pointer p-3 flex justify-between items-center user-card"
 		>
-			<span class="ml-3">{{ route.path + ' page' | titlecase }}</span>
+			<span class="ml-3">{{
+				route.path!.split('-').join(' ') | titlecase
+			}}</span>
 			<span>></span>
 		</li>
 	</ul>

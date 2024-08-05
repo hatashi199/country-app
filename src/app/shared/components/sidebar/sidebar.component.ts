@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Route } from '@angular/router';
-import { routes } from '../../../app-routing.module';
+import { routes } from '../../../countries/countries-routing.module';
 
 @Component({
 	selector: 'shared-sidebar',
