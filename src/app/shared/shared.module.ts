@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 
 @NgModule({
 	declarations: [
@@ -15,7 +16,8 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
 		ContactPageComponent,
 		SidebarComponent,
 		HeaderComponent,
-		SearchBoxComponent
+		SearchBoxComponent,
+		LoadingSpinnerComponent
 	],
 	imports: [RouterModule, CommonModule],
 	exports: [
@@ -24,7 +26,8 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
 		ContactPageComponent,
 		SidebarComponent,
 		HeaderComponent,
-		SearchBoxComponent
+		SearchBoxComponent,
+		LoadingSpinnerComponent
 	],
 	providers: []
 })

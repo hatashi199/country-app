@@ -1,7 +1,10 @@
+<shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
 <div class="flex flex-col gap-y-4 mt-8">
 	<shared-search-box
 		[placeholder]="'Búsqueda por país ...'"
+		[initialValue]="initialValue"
 		(onValueEmitter)="searchByCountry($event)"
+		(onDebounce)="searchByCountry($event)"
 	></shared-search-box>
 	<countries-table [countries]="countries"></countries-table>
 </div>
