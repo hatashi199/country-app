@@ -5,24 +5,33 @@
 </ng-template>
 
 <div *ngIf="country; else loading">
-	<div>
-		<h2>País - {{ country.name.common }}</h2>
-		<div>
-			<h2>Bandera</h2>
+	<div class="flex flex-col gap-8 items-center px-6 text-[#6e59f1]">
+		<h2 class="">{{ country.name.common }}</h2>
+		<div
+			class="border border-solid border-[#6e59f1] p-2 max-w-[500px] w-full rounded-md"
+		>
 			<img
 				[src]="country.flags.svg"
 				alt="img-thumbnail"
 			/>
 		</div>
-		<ul>
+		<ul class="w-full flex flex-col items start">
 			<li>Población - {{ country.population }}</li>
 			<li>Código - {{ country.cca3 }}</li>
 		</ul>
-		<div>
-			<span>{{ country.translations['ara'].common }}</span>
-			<span>{{ country.translations['kor'].common }}</span>
-			<span>{{ country.translations['jpn'].common }}</span>
-			<span>{{ country.translations['ita'].common }}</span>
+		<div class="flex flex-wrap gap-2 justify-center">
+			<span class="bg-[#6e59f1] text-white px-3 py-1 rounded-[100px]">{{
+				country.translations['ara'].common
+			}}</span>
+			<span class="bg-[#6e59f1] text-white px-3 py-1 rounded-[100px]">{{
+				country.translations['kor'].common
+			}}</span>
+			<span class="bg-[#6e59f1] text-white px-3 py-1 rounded-[100px]">{{
+				country.translations['jpn'].common
+			}}</span>
+			<span class="bg-[#6e59f1] text-white px-3 py-1 rounded-[100px]">{{
+				country.translations['ita'].common
+			}}</span>
 		</div>
 	</div>
 </div>

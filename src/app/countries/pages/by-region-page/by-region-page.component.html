@@ -1,12 +1,11 @@
 <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
-<div class="flex flex-col gap-y-4 mt-8">
-	<div class="flex gap-x-2">
+<div class="flex flex-col gap-y-4">
+	<div class="flex flex-wrap justify-center gap-2">
 		<button
 			*ngFor="let region of regions"
-			class="px-5 py-1 bg-white text-gray-700 border border-solid border-gray-700 rounded-[100px]"
+			class="px-5 py-1 bg-white text-[#6e59f1] border border-solid border-[#6e59f1] rounded-[100px]"
 			[ngClass]="{
-				'bg-gray-700': selectedRegion === region,
-				'text-white': selectedRegion === region,
+				'bg-[#6e59f1] text-white font-bold': selectedRegion === region,
 			}"
 			(click)="searchByRegion(region)"
 		>

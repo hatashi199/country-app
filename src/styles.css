@@ -13,11 +13,11 @@ body {
 	min-height: 100vh;
 }
 
-html,
-body {
-	height: 100%;
-}
 body {
 	margin: 0;
 	font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.generalBoxShadow {
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
